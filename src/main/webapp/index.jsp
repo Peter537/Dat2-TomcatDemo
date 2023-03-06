@@ -9,7 +9,6 @@
 </h1>
 <br/>
 <a href="hello-servlet">Hello Servlet</a>
-
 <form action="hello-servlet">
     <label for="fname">First name:</label><br>
     <input type="text" id="fname" name="fname" value="John"><br>
@@ -17,6 +16,5 @@
     <input type="text" id="lname" name="lname" value="Doe"><br><br>
     <input type="submit" value="Submit">
 </form>
-
 </body>
 </html>
