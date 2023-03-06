@@ -1,6 +1,7 @@
 package com.example.dat2tomcatdemo;
 
 import java.io.*;
+import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
@@ -15,7 +16,7 @@ public class HelloServlet extends HttpServlet {
     }
 
     @Override
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.setContentType("text/html");
 
         String name = request.getParameter("navn");
@@ -25,6 +26,9 @@ public class HelloServlet extends HttpServlet {
         out.println("<html><body>");
         out.println("<h1>" + this.message + " " + name + "</h1>");
         out.println("</body></html>");
+
+        request.setAttribute("navn", name);
+        request.getRequestDispatcher("WEB-INF/indenfor.jsp").forward(request, response);
     }
 
     @Override
