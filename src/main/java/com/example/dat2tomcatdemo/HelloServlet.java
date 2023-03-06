@@ -11,17 +11,19 @@ public class HelloServlet extends HttpServlet {
 
     @Override
     public void init() {
-        this.message = "Hello World!";
+        this.message = "Hej";
     }
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
 
+        String name = request.getParameter("navn");
+
         // Hello
         PrintWriter out = response.getWriter();
         out.println("<html><body>");
-        out.println("<h1>" + this.message + "</h1>");
+        out.println("<h1>" + this.message + " " + name + "</h1>");
         out.println("</body></html>");
     }
 
