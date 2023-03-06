@@ -5,10 +5,9 @@
     <title>JSP - Hello World</title>
 </head>
 <body>
-<h1><%= "Hello World!" %>
+<h1><%= "Velkommen til min side!" %>
 </h1>
 <br/>
-<a href="hello-servlet">Hello Servlet</a>
 <form action="hello-servlet">
     <label for="navn">Skriv dit navn:</label><br>
     <input type="text" id="navn" name="navn" value="Peter"><br>

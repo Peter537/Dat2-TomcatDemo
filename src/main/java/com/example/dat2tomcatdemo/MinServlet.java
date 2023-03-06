@@ -5,13 +5,13 @@ import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
-@WebServlet(name = "helloServlet", value = "/hello-servlet")
-public class HelloServlet extends HttpServlet {
+@WebServlet(name = "minServlet", value = "/min-servlet")
+public class MinServlet extends HttpServlet {
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        String name = request.getParameter("navn");
-        request.setAttribute("navn", name);
-        request.getRequestDispatcher("WEB-INF/minside.jsp").forward(request, response);
+        String tal = request.getParameter("tal");
+        request.setAttribute("tal", tal);
+        request.getRequestDispatcher("WEB-INF/duimaal.jsp").forward(request, response);
     }
 }
