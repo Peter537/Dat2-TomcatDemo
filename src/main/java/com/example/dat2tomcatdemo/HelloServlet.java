@@ -12,6 +12,7 @@ public class HelloServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String name = request.getParameter("navn");
         request.setAttribute("navn", name);
+        request.getSession().setAttribute("navn", name);
         request.getRequestDispatcher("WEB-INF/minside.jsp").forward(request, response);
     }
 }

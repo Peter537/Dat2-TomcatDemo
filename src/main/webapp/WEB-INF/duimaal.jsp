@@ -5,6 +5,6 @@
 </head>
 <body>
     <h1>Du er nu i mål</h1>
-    <p>Du valgte tallet ${requestScope.tal}.</p>
+    <p>${requestScope.navn}, du valgte tallet ${requestScope.tal}.</p>
 </body>
 </html>

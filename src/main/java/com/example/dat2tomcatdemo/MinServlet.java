@@ -12,6 +12,7 @@ public class MinServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String tal = request.getParameter("tal");
         request.setAttribute("tal", tal);
+        request.setAttribute("navn", request.getSession().getAttribute("navn"));
         request.getRequestDispatcher("WEB-INF/duimaal.jsp").forward(request, response);
     }
 }
